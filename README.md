@@ -1,69 +1,93 @@
 
 [![Open In Power Bi](https://img.shields.io/badge/open_in_power_bi-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)](https://app.powerbi.com/view?r=eyJrIjoiMTQ1YjJiODctNmJjMS00NGYwLWFjMWEtNGE5YzdkYWUyYzIwIiwidCI6ImFlZDI3MWNkLTYzOTgtNDllZi1hOWNmLTQ4NDIyMTAxZTE0ZSIsImMiOjEwfQ%3D%3D)
 
-# Pharmaceutical_Sales_Analysis
-In this ‘Data Analysis’ project, we’ll analyze a global Pharmaceutical Manufacturing Company's raw sales data and draw meaningful insights.
+💊 Pharmaceutical Sales Analysis – Student Project
+📌 Introduction
 
-<img src="https://github.com/sssingh/pharmaceutical-sales-analysis-powerbi/blob/main/images/pharma-title-image.png?raw=true" width="1000" height="500" />
+This project was developed as part of my college coursework in Data Analytics & Visualization.
+The main objective was to explore, clean, and analyze a pharmaceutical sales dataset, then present the findings using an interactive Power BI dashboard.
 
-## Features
-⚡PowerBI Desktop   
-⚡PowerQuery Editor [For data-transformation/data-modeling]  
-⚡PowerBI Service [For making the report accessible on the web without PowerBI login]  
-⚡Multipage fully Interactive Report [For drawing insights and analysis] 
+The fictional company, PharmaCo, operates in multiple regions and sells products through distributors to pharmacies and hospitals. The dataset provided was in .csv format and represents wholesale-to-retail transactions.
 
-## Table of Contents
-- [Introduction](#introduction) 
-- [Objective](#objective)
-- [Dataset](#dataset)
-- [Solution Approach](#solution-approach)
-- [How To Use](#how-to-use)
-- [License](#license)
-- [Credits](#credits)
-- [Get in touch](#get-in-touch)
+While the business scenario is realistic, the dataset was adapted for educational purposes.
 
+🎯 Objectives
 
-## Introduction
-* `Datamatrix-ml Pharmaceuticals` is one of the leading Pharmaceutical Manufacturing companies with a global presence. 
-* Their Markets are divided into different regions across the world. One of those regions manages the German and Poland Markets. 
-* Company does not sell directly to customers. Instead, they work with a couple of Distributors in all their regions. 
-* They have an agreement with each distributor to share their Sales Data. This is to enable them to gain insights up to the retail level. This data is made available to them in CSV format.
+Practice data cleaning & transformation using Power Query Editor.
 
-## Objectives
-The firm has asked us to perform in-depth data analysis to get insight into company sales performance. Specifically, below are the essential requirements to be satisfied…
-|Requirement ID|For Whom|Requirement Description|
-|:--|:---|:--|
-DM-DA01-REQ-1|Executive Committee|A high-level overview showing `company’s overall sales performance by `year` by `month,` by `customer cities,` by `channel,` by `sub-channel .`Should be able to quickly see `top drug class by sales`, `top drug by sales`, `top customer city by sales`
-DM-DA01-REQ-2|Sales Manager/Sales Rep|A detailed overview showing sales `by distributors and product,` `top 5 product, customer and cities`, sales numbers split by `channels and sub-channels.`
-DM-DA01-REQ-3|Head of Sales|A detailed report of `sales by sales-team split by product` and `sales by sales-team split by product class.` <br> A detailed analysis showing `Top sales managers`, `Top sales reps,` `Top product split by sales team contributions` answering. <br> An ability to filter/slice data by `year` and `months.`   
+Build an interactive Power BI dashboard for quick insights.
 
-***Table-1 : Requirements***
+Analyze sales trends by year, month, product, and region.
+
+Identify top products, top cities, and top-performing sales teams.
+
+Learn how to apply EDA (Exploratory Data Analysis) concepts on real-world-like data.
+
+📂 Dataset
+
+The dataset contains fictional sales transactions with the following fields:
+
+Field	Description
+Distributor	Name of wholesaler
+Customer Name	Name of customer (pharmacy, hospital, etc.)
+City	Customer’s city
+Country	Customer’s country
+Channel	Type of buyer (Hospital, Pharmacy)
+Sub-channel	Sector of buyer (Government, Private, etc.)
+Product Name	Medicine/drug name
+Product Class	Class of drug (Antibiotics, etc.)
+Quantity	Quantity purchased
+Price	Selling price per unit
+Sales	Total revenue from the sale
+Month	Month of sale
+Year	Year of sale
+Sales Rep	Sales representative name
+Manager	Sales manager’s name
+Sales Team	Team name of sales rep
+
+🛠 Tools & Technologies Used
+
+Power BI Desktop – Dashboard creation & visualization
+Power Query Editor – Data transformation & modeling
+Python (pandas) – Exploratory Data Analysis (optional)
+Power BI Service – Publishing the report for web access
 
 ## Dataset
 The dataset is sourced from each distributor. It contains Pharmaceutical Manufacturing Company’s, Wholesale-Retail Data. The field description of the raw data is given below. The raw dataset `pharma-data.csv` can be downloaded from [here](https://drive.google.com/file/d/1npKF_C2tG5psY-at4wvpEgh6T-7KHxEZ/view?usp=share_link)
 
-|Field|Description|
-|:---|:--|
-|Distributor| Name of Wholesaler|
-|Customer Name| Name of customer|
-|City| Customer's city|
-|Country| Customer's country|
-|Latitude| Customer's Geo Latitude|
-|Longitude| Customer's Geo Longitude|
-|Channel|Class of buyer (Hospital, Pharmacy)|
-|Sub-channel|Sector of the buyer (Government, Private, etc.)|
-|Product Name|Name of Drug|
-|Product Class|Class of Drug (Antibiotics, etc.)|
-|Quantity|Quantity purchased|
-|Price|Price product was sold for|
-|Sales|Amount made from sale|
-|Month|Month sale was made|
-|Year|Year sale was made|
-|Name of Sales Rep|Name of the Sales rep who facilitated the sale|
-|Manager|Sales rep's Manager Name|
-|Sales Team|Sale rep's team|
-***Table-2 : Data Definition***
+📊 Project Workflow
 
+Exploratory Data Analysis (EDA)
+
+Checked for missing values, unusual entries, and outliers.
+
+Identified categorical & numerical fields.
+
+Confirmed realistic ranges for sales and quantities.
+
+Data Cleaning & Transformation
+
+Renamed columns for clarity.
+
+Fixed data types (e.g., numbers, dates, text).
+
+Removed any incorrect/duplicate entries.
+
+Data Modeling
+
+Created a star schema model in Power BI.
+
+Separated facts (sales data) from dimensions (product, customer, date, etc.).
+
+Established relationships for efficient filtering.
+
+Dashboard Creation
+
+Executive Summary Page – Overall sales KPIs & trends.
+
+Customer & Distributor Analysis Page – Sales by distributor, city, and product.
+
+Sales Team Performance Page – Sales by team, manager, and rep.
 ## Solution Approach 
 
 |Requirement ID|Solution ID|Proposed Solution|
@@ -116,24 +140,22 @@ This more granular detailed report analyses data from the company distributors' 
  
  <img src="https://github.com/sssingh/pharmaceutical-sales-analysis-powerbi/blob/main/images/sales-team-perform-page.png?raw=true"/>
 
-## How To Use
-### Read-only direct access via the web (Recommended)
-[![Open In Power Bi](https://img.shields.io/badge/open_in_power_bi-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)](https://app.powerbi.com/view?r=eyJrIjoiMTQ1YjJiODctNmJjMS00NGYwLWFjMWEtNGE5YzdkYWUyYzIwIiwidCI6ImFlZDI3MWNkLTYzOTgtNDllZi1hOWNmLTQ4NDIyMTAxZTE0ZSIsImMiOjEwfQ%3D%3D)  
-Explore the fully functional report with native PowerBI interactive experience.
 
-### Full access via PowerBI desktop
-If you have PowerBI desktop installed, download the `pharma-analysis.pbix` from the repo and open it using PowerBI desktop. There is no need to download the raw dataset; the `pbix` files contain the complete normalized data model, feel free to modify and experiment with it.   
+📚 Learning Outcomes
 
-## License
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+Through this project, I learned:
 
-## Get in touch
-[![email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sunil@sunilssingh.me)
-[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/@thesssingh)
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sssingh/)
-[![website](https://img.shields.io/badge/web_site-8B5BE8?style=for-the-badge&logo=ko-fi&logoColor=white)](https://sunilssingh.me)
+How to apply data transformation techniques in Power Query.
 
-## Credits
-- Dataset sourced from [Foresight BI](https://foresightbi.com.ng/practice-data/3-datasets-for-your-portfolio/)
+Designing star schema models for BI reporting.
 
-[Back To The Top](#pharmaceutical-sales-analysis)
+Creating dynamic, slicer-driven dashboards in Power BI.
+
+Communicating insights visually for decision-making.
+
+📜 License & Credits
+
+This project is licensed under the MIT License, which allows reuse, modification, and distribution with proper attribution.
+Original inspiration & dataset structure adapted from an open-source Power BI project by Sunil Singh (MIT License).
+
+MIT License link: https://choosealicense.com/licenses/mit/
